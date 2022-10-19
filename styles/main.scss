@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root{
+    //=== COLORS 
+     /* Primary */
+     --dark-cyan: hsl(185, 75%, 39%);
+     --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+     --dark-grayish-blue: hsl(227, 10%, 46%);
+     --white: #fff;
+     /* Neutral */
+     --dark-gray: hsl(0, 0%, 59%);
+
+    //=== TYPOGRAPHY
+    --font-size-default: 18px;
+
+    --font-primary: 'Kumbh Sans', sans-serif;
+
+    --font-w-medium: 400;
+    --font-w-bold: 700;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+body{
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    min-height: 100vh;
+    background-color: var(--dark-cyan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+ul{ list-style: none;}
+
+
+.card__container{
+    position: relative;
+    background-color: var(--white);
+    border-radius: 15px;
+    max-width: 350px;
+    text-align: center;
+    overflow: hidden;
+
+    .card__profile-pic{
+        position: absolute;
+        top: 30%;
+        left: 35%;
+        min-height: 6rem;
+        min-width: 6rem;
+        background-image: url("../images/image-victor.jpg");
+        background-size: cover;
+        border-radius: 50%;
+        border: 5px solid var(--white);
+
+    }
+
+    .card__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .card__content-data{
+            margin-top: 20%;
+            margin-bottom: 1rem;
+
+            h1{
+                font-size: var(--font-size-default);
+                color: var(--very-dark-desaturated-blue);
+                span{
+                    font-weight: var(--font-w-medium);
+                    color: var(--dark-gray);
+                }
+            }
+            .card__content-country{
+                margin-top: 5px;
+                font-weight: 400;
+                color: var(--dark-gray);
+            }
+        }
+        
+    }
+
+    .card__stats-list{
+        border-top: 1px solid hsl(0, 1%, 81%);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 1rem;
+
+        .item{
+            display: flex;
+            flex-direction: column;
+
+            .num{
+                color: var(--very-dark-desaturated-blue);
+                font-weight: var(--font-w-bold);
+                font-size: var(--font-size-default);
+            }
+            span{ 
+                letter-spacing: 2px;
+                color: var(--dark-gray);
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+
+footer {
+    margin-top: 100px;
+
+    .attribution {
+        font-size: 11px;
+        text-align: center;
+
+        a{
+            color: hsl(228, 45%, 44%);
+        }
+  }
+
+}
+
+
+// small screen 
+@media screen and (max-width: 375px) {
+    
+}
